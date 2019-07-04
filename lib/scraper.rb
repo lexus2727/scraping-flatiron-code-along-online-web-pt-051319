@@ -4,10 +4,14 @@ require 'open-uri'
 require 'pry'
 #require_relative './course.rb'
 
-def get_page
+
+  class Scraper
   
+def get_page
+  page = Nokogiri::HTML(open"(https://www.amazon.com/gp/bestsellers/electronics/?ie=UTF8&ref_=sv_e_2"))
+end
 
-
+end
 
 
 
