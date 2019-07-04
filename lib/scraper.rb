@@ -8,7 +8,7 @@ require 'pry'
   class Scraper
   
 def get_page
-  page = Nokogiri::HTML(open"(https://www.amazon.com/gp/bestsellers/electronics/?ie=UTF8&ref_=sv_e_2"))
+  page = Nokogiri::HTML(open("https://www.amazon.com/gp/bestsellers/electronics/?ie=UTF8&ref_=sv_e_2"))
   
   items = page.css(".zg-item-immersion")
   puts items[0]
