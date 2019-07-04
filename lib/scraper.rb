@@ -22,11 +22,12 @@ class Scraper
     
     def get_courses
       self.get_page.css(".post")
-      #binding.pry
+     # binding.pry
     end
     
     def make_courses
       self.get_courses.each do |post|
+       # binding.pry
         course = Course.new
         course.title = post.css("h2").text
         course.schedule = post.css(".date").text
